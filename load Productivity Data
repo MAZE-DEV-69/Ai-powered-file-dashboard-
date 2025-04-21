@@ -1,0 +1,8 @@
+function loadProductivityData() {
+    fetch('dashboardData.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('dashboard-content').innerText =
+                `Focus Hours: ${data.productivity.focusHours}\nTasks: ${data.productivity.tasksCompleted}`;
+        });
+}
