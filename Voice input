@@ -1,0 +1,23 @@
+function requestVoiceInput() {
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.start();
+
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        console.log('Voice Input:', transcript);
+        handleVoiceCommand(transcript);
+    };
+}
+
+function handleVoiceCommand(command) {
+    if (command.includes("show my data")) {
+        fetchDataAndDisplay();
+    }
+}
+
+function fetchDataAndDisplay() {
+    // Placeholder for fetching data (e.g., from an API or local storage)
+    const data = { steps: 8000, heartRate: 72 }; // Example data
+    document.getElementById('data-visualization').innerHTML = `Steps: ${data.steps}, Heart Rate: ${data.heartRate}`;
+}
