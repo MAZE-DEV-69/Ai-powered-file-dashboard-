@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Your Personal Data Dashboard</h1>
+        <div id="insights">
+            <h2>Insights</h2>
+            <div id="data-visualization">Loading Data...</div>
+        </div>
+        <button onclick="requestVoiceInput()">Speak to the Dashboard</button>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
